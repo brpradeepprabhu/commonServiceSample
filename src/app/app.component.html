@@ -10,26 +10,45 @@
 
 
 <div>
-  <h3>Import the service in your app module to access across the screen</h3>
-  <code [innerHTML]="sampleData">
+  <h3>We are using the below sampled data to test the Common Service</h3>
+  Sample Data = <code [innerHTML]="sampleData">
   
 </code>
 </div>
 <div>
   <h3>Whether sampleData is undefined</h3>
   <code>
-this.undefinedData = this.cs.isUndefined(this.data);
+     this.undefinedData = this.cs.isUndefined(this.data);
   </code>
   <div>
-    Data is undefined = {{undefinedData}}
+    Sample Data is undefined = {{undefinedData}}
   </div>
 </div>
 <div>
-  <h3>Import the service in your app module to access across the screen</h3>
+  <h3>Whether sampleData is defined</h3>
   <code>
-
+      this.definedData = this.cs.isDefined(this.data);
   </code>
   <div>
-    Data is defined = {{definedData}}
+    Sample Data is defined = {{definedData}}
   </div>
+</div>
+<div>
+  <h3>Whether sampleData is object</h3>
+  <code>
+      this.objectData = this.cs.isObject(this.data);
+  </code>
+  <div>
+    Sample Data is Object = {{objectData}}
+  </div>
+</div>
+<div>
+  <h3>To loop the sample data</h3>
+  <code [innerHTML]="forEachLoop">
+     
+  </code>
+  <div>
+    Sample Data is values = {{valuesInArray}}
+  </div>
+
 </div>

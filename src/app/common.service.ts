@@ -1,4 +1,4 @@
-import { Injectable,ElementRef } from '@angular/core';
+import { Injectable, ElementRef } from '@angular/core';
 /**
  * Common functionalities of angular1
  */
@@ -32,7 +32,7 @@ export class CommonService {
    * @param ele - Dom Element
    * @param className - adding the className
    */
-  addClass(ele:any, className:string) {
+  addClass(ele: any, className: string) {
     ele.className = ele.className + " " + className;
   }
 
@@ -41,7 +41,7 @@ export class CommonService {
    * @param ele
    * @param className
    */
-  removeClass(ele:any, className:string) {
+  removeClass(ele: any, className: string) {
     ele.className = ele.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
   }
 
@@ -161,7 +161,7 @@ export class CommonService {
    * @param context
    * @returns {any}
    */
-  forEach(obj, iterator, context) {
+  forEach(obj: any, iterator: any, context?: any) {
     var key, length;
     if (obj) {
       if (this.isFunction(obj)) {
@@ -229,9 +229,9 @@ export class CommonService {
    * @param maxDepth
    * @returns {boolean}
    */
- private isValidObjectMaxDepth(maxDepth) {
+  private isValidObjectMaxDepth(maxDepth) {
     return this.isNumber(maxDepth) && maxDepth > 0;
-  }  
+  }
 
   /**
    * To copy the element from destination to source
@@ -240,7 +240,7 @@ export class CommonService {
    * @param maxDepth
    * @returns {any}
    */
-  copy(source, destination, maxDepth) {
+  copy(source: any, destination: any, maxDepth?: number) {
     var stackSource = [];
     var stackDest = [];
     maxDepth = this.isValidObjectMaxDepth(maxDepth) ? maxDepth : NaN;
@@ -417,7 +417,7 @@ export class CommonService {
         return re;
 
       case '[object Blob]':
-        return new source.constructor([source], {type: source.type});
+        return new source.constructor([source], { type: source.type });
     }
 
     if (this.isFunction(source.cloneNode)) {
