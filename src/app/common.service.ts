@@ -4,7 +4,7 @@ import { Injectable,ElementRef } from '@angular/core';
  */
 @Injectable()
 
-export class CommonHandler {
+export class CommonService {
   /**
    * Initalize the common handler
    */

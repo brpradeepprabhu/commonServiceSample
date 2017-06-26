@@ -1,3 +1,35 @@
 <h1>
-  {{title}}
+  Common Service to implement Angular 1 core function
 </h1>
+<div>
+  <h3>Import the service in your app module to access across the screen</h3>
+  <pre>
+  <code [innerHTML]='CodeModule'></code>
+</pre>
+</div>
+
+
+<div>
+  <h3>Import the service in your app module to access across the screen</h3>
+  <code [innerHTML]="sampleData">
+  
+</code>
+</div>
+<div>
+  <h3>Whether sampleData is undefined</h3>
+  <code>
+this.undefinedData = this.cs.isUndefined(this.data);
+  </code>
+  <div>
+    Data is undefined = {{undefinedData}}
+  </div>
+</div>
+<div>
+  <h3>Import the service in your app module to access across the screen</h3>
+  <code>
+
+  </code>
+  <div>
+    Data is defined = {{definedData}}
+  </div>
+</div>
